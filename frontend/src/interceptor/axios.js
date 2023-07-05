@@ -5,7 +5,7 @@ axios.interceptors.response.use(resp => resp, async error => {
     if (error.response.status === 401 && !refresh) {
         refresh = true;
         console.log(localStorage.getItem('refresh_token'));
-        const response = await axios.post('http://localhost:8000/token/refresh/',      
+        const response = await axios.post('https://dhirajmuppineti.pythonanywhere.com/token/refresh/',      
                         {refresh:localStorage.getItem('refresh_token')},
                         { headers: {'Content-Type': 'application/json'} ,withCredentials: true});
         if (response.status === 200) {
