@@ -21,7 +21,7 @@ export const BlogItem = (props) => {
             setLike(1);
             const userId = jwt(localStorage.getItem('access_token'));
         
-            axios.post('http://127.0.0.1:8000/blog/api/likes/', {
+            axios.post('https://dhirajmuppineti.pythonanywhere.com/blog/api/likes/', {
                 user:userId.user_id,
                 blog:props.id,
             })
@@ -37,7 +37,7 @@ export const BlogItem = (props) => {
         else{
             setLike(0);
             setIsLiked(false);
-            axios.delete('http://127.0.0.1:8000/blog/api/likes/'+likeId).then((res) => {
+            axios.delete('https://dhirajmuppineti.pythonanywhere.com/blog/api/likes/'+likeId).then((res) => {
                 console.log(res);
             })
             .catch((err) => {
@@ -62,7 +62,7 @@ export const BlogItem = (props) => {
     const onSubmit = (data)=>{
         const userId = jwt(localStorage.getItem('access_token'));
         
-        axios.post('http://127.0.0.1:8000/blog/api/comments/', {
+        axios.post('https://dhirajmuppineti.pythonanywhere.com/blog/api/comments/', {
             
             comment: data?.comment,
             user:userId.user_id,
