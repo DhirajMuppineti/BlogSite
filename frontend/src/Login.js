@@ -17,7 +17,7 @@ export const Login = () => {
         // Create the POST requuest
         try{
             
-            const {data} = await axios.post('http://localhost:8000/token/', form ,
+            const {data} = await axios.post('https://dhirajmuppineti.pythonanywhere.com/token/', form ,
             {
                 headers: 
                     {'Content-Type': 'application/json'}, withCredentials: true
