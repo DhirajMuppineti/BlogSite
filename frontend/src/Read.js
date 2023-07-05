@@ -16,12 +16,12 @@ function useSearch() {
 
 export const Read = () => {
     let query = useSearch();
-    const url = "http://127.0.0.1:8000/blog/api/blogs/" + query.get('id');
+    const url = "https://dhirajmuppineti.pythonanywhere.com/blog/api/blogs/" + query.get('id');
     const {data} = useQuery(["blog"],() => {
         return Axios.get(url).then((res)=>res.data);
     });
     console.log(data);
-    const commentUrl = "http://127.0.0.1:8000/blog/api/comments/";
+    const commentUrl = "https://dhirajmuppineti.pythonanywhere.com/blog/api/comments/";
     const {data:commentData,isLoading,status,error} = useQuery(["comments"],() => {
         return Axios.get(commentUrl).then((res)=>res.data);
     });
