@@ -21,7 +21,7 @@ export const Signup = () =>{
     });
 
     const onSubmit = (data) =>{
-        axios.post('http://127.0.0.1:8000/register/', {
+        axios.post('https://dhirajmuppineti.pythonanywhere.com/register/', {
             username: data?.username,
             password: data?.password,
             password2:data?.password2,
