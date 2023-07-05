@@ -80,6 +80,8 @@ export const BlogItem = (props) => {
         
     }
 
+    
+
     const DOMPurify = require('dompurify')(window);
     return (
         <>

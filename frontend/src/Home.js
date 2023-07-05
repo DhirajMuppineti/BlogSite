@@ -33,6 +33,7 @@ export const Home = () => {
         return Axios.get(url).then((res)=>res.data);
     });
     console.log(data);
+    const cardStyle = {margin:'10px',padding:'5px',textAlign:'left',width: '18rem' };
 
     if(isLoading){
         return <h1>Loading</h1>;
@@ -42,13 +43,13 @@ export const Home = () => {
     }
     return (
         <>
-        <h3>Hi {message}</h3>
+        <h1>Hi {message}</h1>
         <div style={{display: "flex", height: "auto", alignItems: "flex-start"}}>
             
-            <Container style={{flex:" 0 0 30%",margin:'20px'}}>
+            <Container style={{flex:" 0 0 30%",margin:'20px',marginTop:'0px'}}>
                 
                 {data.map((obj)=>{
-                    return <BlogItem style={{margin:'10px',padding:'5px',textAlign:'left',width: '18rem' }} id={obj?.id} title={obj?.title} subtitle={obj?.subtitle} blog={obj?.content.slice(0,100)+"..."} readlink={true}/>
+                    return <BlogItem style={cardStyle} id={obj?.id} title={obj?.title} subtitle={obj?.subtitle} blog={obj?.content.slice(0,100)+"..."} readlink={true}/>
                 })}
             </Container>
             <Carousel style={{width: "80%", height: "auto",marginRight:'20px'}}>

@@ -33,14 +33,14 @@ export const Read = () => {
     
     
     const blogStyle = {
-        margin:'10px auto 10px auto',
+        margin:'30px auto 10px auto',
         padding:'5px',
         height:'auto',
         width:'150vh', 
         alignItems:"center",
     }
     const commentStyle = {
-        margin:'10px',padding:'5px',textAlign:'left' ,
+        margin:'20px',padding:'5px',textAlign:'left' ,
         borderLeft:'20vh',
         top: '-25px', /* Same as body margin top + border */
         left: '10px',
