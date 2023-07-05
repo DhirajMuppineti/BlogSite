@@ -17,7 +17,7 @@ export const Home = () => {
         else{
             (async () => {
             try {
-                const {data} = await axios.get('http://localhost:8000/home/', {
+                const {data} = await axios.get('https://dhirajmuppineti.pythonanywhere.com/home/', {
                                 headers: {
                                 'Content-Type': 'application/json'
                                 }}
@@ -28,7 +28,7 @@ export const Home = () => {
             }
             })()};
     }, []);
-    const url = "http://127.0.0.1:8000/blog/api/blogs/";
+    const url = "https://dhirajmuppineti.pythonanywhere.com/blog/api/blogs/";
     const {data, isLoading, isError, error} = useQuery(["blogs"],() => {
         return Axios.get(url).then((res)=>res.data);
     });
