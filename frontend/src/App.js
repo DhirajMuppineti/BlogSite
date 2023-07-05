@@ -34,6 +34,7 @@ function App() {
       }, [isAuth]);
     const appStyle = {
       backgroundColor:'#2E4F4F',
+      minHeight:'100vh',
     }
 
   return (
@@ -73,7 +74,7 @@ function App() {
     </>
     :
     <>
-    <div className="App">
+    <div className="App" style={{minHeight:'100vh'}}>
       <AppContext.Provider value = {{isAuth,darkMode,setDarkMode}}> 
         <QueryClientProvider client={client}>
           <Router>
