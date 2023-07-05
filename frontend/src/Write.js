@@ -28,7 +28,7 @@ export const Write = () => {
     const onSubmit = (data) => {
         const userId = jwt(localStorage.getItem('access_token'));
         
-        axios.post('http://127.0.0.1:8000/blog/api/blogs/', {
+        axios.post('https://dhirajmuppineti.pythonanywhere.com/blog/api/blogs/', {
             title: data?.title,
             subtitle: data?.subtitle,
             content: textValue,
