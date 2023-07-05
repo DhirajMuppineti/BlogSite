@@ -13,7 +13,7 @@ import {AppContext} from "./App";
 import jwt from 'jwt-decode'
 
 export const Write = () => {
-    const {isAuth,userDetails} = useContext(AppContext);
+    const {isAuth} = useContext(AppContext);
     const navigate = useNavigate();
     const [textValue,setTextValue] = useState("");
     const schema = yup.object().shape({
