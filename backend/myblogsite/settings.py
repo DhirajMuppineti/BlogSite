@@ -25,13 +25,13 @@ SECRET_KEY = "django-insecure-qk4e@z9bu7%$6zf9u$m0z0b2csbo#gsbw&r)9tn_mf_&z%=z+l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dhirajmuppineti.pythonanywhere.com']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    
+
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -139,6 +139,8 @@ CORS_ORIGIN_WHITELIST = [
     "http://127.0.0.1:8000",
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://dhirajsstupidblog.netlify.app",
+    "https://dhirajmuppineti.pythonanywhere.com",
 ]
 
 REST_FRAMEWORK = {
